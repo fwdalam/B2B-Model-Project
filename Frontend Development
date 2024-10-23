@@ -1,0 +1,45 @@
+# This is the file which will Contain the Frontend of th B2B-Model Website.
+#HTML------->
+It is Kindly Requested to the developer that please write a complete comments before writing a code.
+#Look at the Example bellow. as I am just Staring the html so I write bellow.
+HTML file Start Point.
+---------------------------------------------------------------------------------------------------------------------------------
+#<!DOCTYPE html>: Declares the document type as HTML5.
+#<html lang="en">: The <html> tag begins the HTML document, and lang="en" sets the language to English.
+#<head>: Contains meta-information like character set, viewport settings for responsiveness, and the title of the page.
+#<body>: Holds the visible content of the web page.
+#<header>, <main>, <footer>: Basic semantic tags to organize the layout.
+CSS and JS: Links to external stylesheets and scripts.
+
+
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Website</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>This is the main content area.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Your Website</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
+
+
+
