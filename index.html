@@ -1,83 +1,41 @@
-<<!--Explanation of the Code:
-Flexbox Layout:
-
-The header uses flexbox to align items (display: flex;) with space between the logo and navigation items (justify-content: space-between;).
-align-items: center; vertically centers the items within the header.
-Logo:
-
-The logo is a link (<a>) that you can replace with an image or other content as needed.
-Navigation Menu:
-
-The <nav> element contains a series of links for each menu item.
-CSS styles provide basic formatting, such as spacing between menu items (gap: 20px;) and color changes on hover.
-Styling:
-
-Basic styles are included in the <style> section for demonstration purposes. You can move these styles to your external styles.css file if preferred.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>B2B-Model-Platform</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #4CAF50; /* Header background color */
-            padding: 10px 20px;
-        }
-        .logo {
-            font-size: 24px;
-            color: white;
-            text-decoration: none; /* Remove underline from link */
-        }
-        nav {
-            display: flex;
-            gap: 20px; /* Space between menu items */
-        }
-        nav a {
-            color: white;
-            text-decoration: none; /* Remove underline from links */
-        }
-        nav a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-    </style>
+    <title>B2B Bid Submitting Platform</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <a href="#" class="logo">B2B MODEL</a> <!-- Logo link -->
+        <div class="logo">YourLogo</div>
         <nav>
-            <a href="#">Notification</a>
-            <a href="#">Request</a>
-            <a href="#">Message</a>
-            <a href="#">Seller/Buyer Central</a>
-            <a href="#">Sign In/Sign Up</a>
+            <ul>
+                <li><a href="#submitBid">Bid Submitting</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#central">Buyer/Seller Central</a></li>
+                <li><a href="#messages">Messages</a></li>
+                <li><a href="#signIn">Sign In/Sign Up</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <p>This is the main content area.</p>
-        </section>
-    </main>
+    <div class="container">
+        <h1>Welcome to the B2B Bid Submitting Platform</h1>
 
-    <footer>
-        <p>© 2024 Your Website</p>
-    </footer>
+        <div class="request-form" id="submitBid">
+            <h2>Submit Your Request</h2>
+            <input type="text" id="buyerName" placeholder="Your Name" required>
+            <input type="text" id="productRequest" placeholder="Product Request" required>
+            <button id="submitRequest">Submit Request</button>
+        </div>
 
-    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+        <div class="notifications" id="notifications">
+            <h2>Notifications</h2>
+            <ul id="notificationList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
