@@ -1,17 +1,2 @@
-document.getElementById('submitRequest').addEventListener('click', function() {
-    const buyerName = document.getElementById('buyerName').value;
-    const productRequest = document.getElementById('productRequest').value;
-
-    if (buyerName && productRequest) {
-        const notificationList = document.getElementById('notificationList');
-        const newNotification = document.createElement('li');
-        newNotification.textContent = `${buyerName} submitted a request for "${productRequest}"`;
-        notificationList.appendChild(newNotification);
-
-        // Clear input fields
-        document.getElementById('buyerName').value = '';
-        document.getElementById('productRequest').value = '';
-    } else {
-        alert('Please fill in all fields.');
-    }
-});
+// Basic placeholder script for future functionality.
+console.log("B2B Platform loaded successfully");
