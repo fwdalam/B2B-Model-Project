@@ -13,7 +13,7 @@
         <nav class="navbar">
             <div class="logo">B2B Platform</div>
             <ul class="menu">
-                <li><a href="#">Bid Submitting</a></li>
+                <li><a href="#bidForm">Bid Submitting</a></li>
                 <li><a href="#">Notifications</a></li>
                 <li><a href="#">Buyer/Seller Central</a></li>
                 <li><a href="#">Messaging</a></li>
@@ -50,6 +50,27 @@
         </div>
     </section>
 
+    <!-- Bid Form Section -->
+    <section id="bidForm" style="display: none;">
+        <h2>Submit Your Bid</h2>
+        <form id="bidFormElement">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="pharmaceuticals">Pharmaceuticals</option>
+                <option value="electrical">Electrical Appliances</option>
+                <option value="utilities">Utilities</option>
+                <!-- Add more categories as needed -->
+            </select>
+            <br><br>
+
+            <label for="product">Product Name:</label>
+            <input type="text" id="product" name="product" required>
+            <br><br>
+
+            <button type="button" onclick="submitBidForm()">Submit Bid</button>
+        </form>
+    </section>
+
     <!-- Featured Products Section -->
     <section class="featured-products">
         <h2>Featured Products</h2>
@@ -67,5 +88,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Show bid form when "Bid Submitting" is clicked
+        document.querySelector('.menu li a[href="#bidForm"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('bidForm').style.display = 'block';
+        });
+
+        function submitBidForm() {
+            alert("Bid submitted successfully!");
+            // Hide the bid form after submission
+            document.getElementById('bidForm').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
