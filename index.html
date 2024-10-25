@@ -1,105 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>B2B Platform</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">B2B Platform</div>
-            <ul class="menu">
-                <li><a href="#bidForm">Bid Submitting</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Buyer/Seller Central</a></li>
-                <li><a href="#">Messaging</a></li>
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Header Section -->
+<header>
+    <nav class="navbar">
+        <div class="logo">B2B Platform</div>
+        <ul class="menu">
+            <li><a href="#" onclick="toggleBidForm()">Bid Submitting</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Buyer/Seller Central</a></li>
+            <li><a href="#">Messaging</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="hero-image.png" alt="B2B Platform Hero Image">
-        <div class="hero-text">
-            <h1>Connecting Buyers and Sellers Worldwide</h1>
-        </div>
-    </section>
+<!-- Bid Form Section -->
+<section id="bidForm" style="display: none;">
+    <h2>Submit Your Bid</h2>
+    <form id="bidFormElement">
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="pharmaceuticals">Pharmaceuticals</option>
+            <option value="electrical">Electrical Appliances</option>
+            <option value="utilities">Utilities</option>
+            <!-- Add more categories as needed -->
+        </select>
+        <br><br>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <h2>How It Works</h2>
-        <div class="steps">
-            <div class="step">
-                <h3>Step 1</h3>
-                <p>Submit a product request with all the details</p>
-            </div>
-            <div class="step">
-                <h3>Step 2</h3>
-                <p>Sellers receive notifications and make offers</p>
-            </div>
-            <div class="step">
-                <h3>Step 3</h3>
-                <p>Choose the best offer based on your needs</p>
-            </div>
-        </div>
-    </section>
+        <label for="product">Product Name:</label>
+        <input type="text" id="product" name="product" required>
+        <br><br>
 
-    <!-- Bid Form Section -->
-    <section id="bidForm" style="display: none;">
-        <h2>Submit Your Bid</h2>
-        <form id="bidFormElement">
-            <label for="category">Category:</label>
-            <select id="category" name="category" required>
-                <option value="pharmaceuticals">Pharmaceuticals</option>
-                <option value="electrical">Electrical Appliances</option>
-                <option value="utilities">Utilities</option>
-                <!-- Add more categories as needed -->
-            </select>
-            <br><br>
+        <button type="button" onclick="submitBidForm()">Submit Bid</button>
+    </form>
+</section>
 
-            <label for="product">Product Name:</label>
-            <input type="text" id="product" name="product" required>
-            <br><br>
+<script>
+    // Function to toggle the bid form visibility
+    function toggleBidForm() {
+        const bidForm = document.getElementById('bidForm');
+        bidForm.style.display = bidForm.style.display === 'none' ? 'block' : 'none';
+    }
 
-            <button type="button" onclick="submitBidForm()">Submit Bid</button>
-        </form>
-    </section>
-
-    <!-- Featured Products Section -->
-    <section class="featured-products">
-        <h2>Featured Products</h2>
-        <div class="products-grid">
-            <div class="product">Product 1</div>
-            <div class="product">Product 2</div>
-            <div class="product">Product 3</div>
-            <div class="product">Product 4</div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 B2B Platform. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        // Show bid form when "Bid Submitting" is clicked
-        document.querySelector('.menu li a[href="#bidForm"]').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('bidForm').style.display = 'block';
-        });
-
-        function submitBidForm() {
-            alert("Bid submitted successfully!");
-            // Hide the bid form after submission
-            document.getElementById('bidForm').style.display = 'none';
-        }
-    </script>
-</body>
-</html>
+    function submitBidForm() {
+        alert("Bid submitted successfully!");
+        // Hide the bid form after submission
+        document.getElementById('bidForm').style.display = 'none';
+    }
+</script>
